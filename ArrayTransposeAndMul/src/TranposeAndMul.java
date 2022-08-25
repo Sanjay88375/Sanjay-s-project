@@ -30,13 +30,13 @@ public class TranposeAndMul {
 		}    
 		System.out.println();//new line    
 		}
-		int mul = 1;
+		/*int mul = 1;
 		for(int i = 0; i<original.length; i++)
 		{
 			for(int j = 0; j<original[i].length; j++) {
 				mul = original[i][j]*mul;
 				System.out.print(mul + " ");
 			}
-			System.out.println();
+			System.out.println();*/
 		}
 		}}  
