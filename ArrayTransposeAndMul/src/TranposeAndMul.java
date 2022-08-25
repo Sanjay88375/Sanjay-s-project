@@ -4,7 +4,7 @@ public class TranposeAndMul {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		//creating a matrix  
-		int original[][]={{1,2},{4,5},{8,9}};    
+		int original[][]= new int[][]{{1,2},{4,5},{8,9}};    
 		    
 		//creating another matrix to store transpose of a matrix  
 		int transpose[][]=new int[3][3];  //3 rows and 3 columns  
@@ -29,4 +29,14 @@ public class TranposeAndMul {
 		System.out.print(transpose[i][j]+" ");    
 		}    
 		System.out.println();//new line    
-		}}}  
+		}
+		int mul = 1;
+		for(int i = 0; i<original.length; i++)
+		{
+			for(int j = 0; j<original[i].length; j++) {
+				mul = original[i][j]*mul;
+				System.out.print(mul + " ");
+			}
+			System.out.println();
+		}
+		}}  
