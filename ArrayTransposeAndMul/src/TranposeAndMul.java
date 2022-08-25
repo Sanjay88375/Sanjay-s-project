@@ -1,42 +1,29 @@
-
+import java.util.Arrays;
 public class TranposeAndMul {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		//creating a matrix  
-		int original[][]= new int[][]{{1,2},{4,5},{8,9}};    
-		    
-		//creating another matrix to store transpose of a matrix  
-		int transpose[][]=new int[3][3];  //3 rows and 3 columns  
-		    
-		//Code to transpose a matrix  
-		for(int i=0;i<3;i++){    
-		for(int j=0;j<3;j++){    
-		transpose[i][j]=original[j][i];  
-		}    
-		}    
-		  
-		System.out.println("Printing Matrix without transpose:");  
-		for(int i=0;i<3;i++){    
-		for(int j=0;j<3;j++){    
-		System.out.print(original[i][j]+" ");    
-		}    
-		System.out.println();//new line    
-		}    
-		System.out.println("Printing Matrix After Transpose:");  
-		for(int i=0;i<3;i++){    
-		for(int j=0;j<3;j++){    
-		System.out.print(transpose[i][j]+" ");    
-		}    
-		System.out.println();//new line    
-		}
-		/*int mul = 1;
-		for(int i = 0; i<original.length; i++)
-		{
-			for(int j = 0; j<original[i].length; j++) {
-				mul = original[i][j]*mul;
-				System.out.print(mul + " ");
+		int [][] matrix = new  int [][] {{1,2},{4,5},{8,9}};
+		int [][] newmatrix= new int [2][3];
+		int [][] multimatrix = new int[3][1];
+		
+		//1st loop for row of matrix 
+		for(int i = 0;i<matrix.length;i++) {
+			//2nd loop for row of transpose matrix
+			int a = 1;
+			for(int j = 0 ; j<2;j++) {
+				newmatrix[j][i] = matrix[i][j];
+				a = a*  matrix[i][j];
+				
 			}
-			System.out.println();*/
+			multimatrix[i][0] = a; 
+			
 		}
-		}}  
+		// matrix multiplication
+		System.out.println("multiply of matrix is" + Arrays.deepToString(multimatrix));
+		
+		
+		//Transpose matrix
+		System.out.println("Transpose matrix is" + Arrays.deepToString(newmatrix));
+		}
+		} 
